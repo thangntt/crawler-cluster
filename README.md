@@ -5,7 +5,7 @@ Crawler Cluster is a web crawling system, allowing to build crawlers of any scal
 * Cralwer
 * Schedule
 ### Architecture
-![topo](image/architecture.png)
+![topo](img/architecture.png)
 ## Setup and Run 
 ### Requirements:
 1. Python 3
