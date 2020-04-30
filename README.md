@@ -60,6 +60,16 @@
 ```
 ### Run app
 ```shell
+  # step 1: run kafka
+  $ sudo cd /opt/confluent-5.5.0-2.12
+  $ sudo ./bin/zookeeper-server-start etc/kafka/zookeeper.properties
+  $ sudo ./bin/kafka-server-start etc/kafka/server.properties
+  # step 2: run cassandra
+  $ sudo cd /opt/apache-cassandra/bin
+  $ sudo ./cassandra
+  # t
+  $sudo./cqlsh -u cassandra -p cassandra
+  
 ```
 ### Performance testing
 
