@@ -21,9 +21,24 @@
   $sudo virtualenv -p /usr/bin/python3.6 py36_env
 ```
 2. Install Cassandra
+```shell
+  
+```
 3. Install Kafka
-
+```shell
+  # step 1: download confluent 
+  $ sudo cd /opt
+  $ sudo curl -O http://packages.confluent.io/archive/5.5/confluent-5.5.0-2.12.zip
+  $ unzip confluent-5.5.0-2.12.zip
+  # step 2: config file  /opt/confluent-5.5.0-2.12/etc/kafka/zookeeper.properties
+  dataDir=/data/zookeeper
+  clientPort=2181
+  maxClientCnxns=0
+  # step 3: config file /opt/confluent-5.5.0-2.12/etc/kafka/server.properties
+  listeners=PLAINTEXT://127.0.0.1:9092
+```
 ### Run app
-
+```shell
+```
 ### Performance testing
 
