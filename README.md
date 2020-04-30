@@ -22,19 +22,40 @@
 ```
 2. Install Cassandra
 ```shell
-  
+  # step 1: download cassandra 
+  $ sudo cd /opt
+  $ sudo wget http://mirrors.viethosting.com/apache/cassandra/3.0.20/apache-cassandra-3.0.20-bin.tar.gz
+  $ tar -xzvf apache-cassandra-3.0.20-bin.tar.gz
+  # step 2: creat folder
+  sudo mkdir -p /data/cassandra/commitlog
+  sudo mkdir -p /data/cassandra/data
+  sudo mkdir -p /data/cassandra/saved_cahes
+  # step 2: config file conf/cassandra.yaml 
+  seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+         - seeds: "127.0.0.1"
+  listen_address: 127.0.0.1
+  endpoint_snitch: SimpleSnitch
+  data_file_directories:
+      - /data/cassandra/data
+  commitlog_directory: /data1/cassandra/commitlog
+  saved_caches_directory: /data1/cassandra/saved_caches
+  rpc_address:  0.0.0.0
+  authenticator: PasswordAuthenticator
+  broadcast_rpc_address: 127.0.0.1
 ```
 3. Install Kafka
 ```shell
   # step 1: download confluent 
   $ sudo cd /opt
-  $ sudo curl -O http://packages.confluent.io/archive/5.5/confluent-5.5.0-2.12.zip
+  $ sudo wget http://packages.confluent.io/archive/5.5/confluent-5.5.0-2.12.zip
   $ unzip confluent-5.5.0-2.12.zip
-  # step 2: config file  /opt/confluent-5.5.0-2.12/etc/kafka/zookeeper.properties
+  # step 2: config file etc/kafka/zookeeper.properties
   dataDir=/data/zookeeper
   clientPort=2181
   maxClientCnxns=0
-  # step 3: config file /opt/confluent-5.5.0-2.12/etc/kafka/server.properties
+  # step 3: config file /etc/kafka/server.properties
   listeners=PLAINTEXT://127.0.0.1:9092
 ```
 ### Run app
