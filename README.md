@@ -3,7 +3,8 @@
 ## Overview
 Crawler Cluster is a web crawling system, allowing to build crawlers of any scale and purpose. It includes:
 * Cralwer
-* Sch
+* Schedule
+### Architecture
 
 ## Setup and Run 
 ### Requirements:
