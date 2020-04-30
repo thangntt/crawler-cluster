@@ -1,0 +1,10 @@
+#3. insert domain_config
+INSERT INTO domain_config(domain, concurrent_user, kafka_topic, time_delay) values('gen.lib.rus.ec', 1, 'topic_1', 5);
+INSERT INTO domain_config(domain, concurrent_user, kafka_topic, time_delay) values('libgen.me', 1, 'topic_2', 3);
+
+#4. insert url_crawl
+INSERT INTO url_crawl(domain, count_called, create_time, header_request, type_handler, url) VALUES ('gen.lib.rus.ec', 0, toUnixTimestamp(now()), '', 1, 'http://gen.lib.rus.ec/search.php?&req=data&phrase=1&view=simple&column=def&sort=def&sortmode=ASC&page=1');
+INSERT INTO url_crawl(domain, count_called, create_time, header_request, type_handler, url) VALUES ('gen.lib.rus.ec', 0, toUnixTimestamp(now()), '', 1, 'http://gen.lib.rus.ec/search.php?&req=data&phrase=1&view=simple&column=def&sort=def&sortmode=ASC&page=2');
+
+INSERT INTO url_crawl(domain, count_called, create_time, header_request, type_handler, url) VALUES ('libgen.me', 0, toUnixTimestamp(now()), '', 1, 'https://libgen.lc/ads.php?md5=b88976015f46966d04b0e7e9c405d427&key=5363');
+INSERT INTO url_crawl(domain, count_called, create_time, header_request, type_handler, url) VALUES ('libgen.me', 0, toUnixTimestamp(now()), '', 1, 'https://libgen.lc/ads.php?md5=1b88dcdcc771a2d145d7f1ac6b41dd2e&key=6339');
