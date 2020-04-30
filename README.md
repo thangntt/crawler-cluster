@@ -2,7 +2,8 @@
 
 ## Overview
 Crawler Cluster is a web crawling system, allowing to build crawlers of any scale and purpose. It includes:
-* [Scrapy](https://github.com/scrapy/scrapy) is a fast high-level web crawling and web scraping framework, used to crawl websites and extract structured data from their page. It can be used for a wide range of purposes, from data mining to monitoring and automated testing.
+* Cralwer
+* Sch
 
 ## Setup and Run 
 ### Requirements:
